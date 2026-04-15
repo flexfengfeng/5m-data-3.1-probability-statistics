@@ -1,75 +1,179 @@
-# **Self-Study Preparation Guide**
+# Self Study — 3.1 Probability and Statistics
 
-**⏳ Estimated Prep Time:** 60 minutes
+**Estimated time:** 60 minutes  
+**Complete this before the lesson session.**
 
-Welcome to our flipped-classroom session, where you'll review foundational concepts beforehand to maximize our time for hands-on coding and debugging. This pre-study focuses on the mathematical pillars of Machine Learning: **Probability Distributions** and **Statistical Inference**. 
+This is a flipped-classroom preparation guide. Your goal is not to memorise everything — it is to arrive at the lesson having seen the concepts once so the hands-on session feels like reinforcement, not a first encounter.
 
-By mastering these concepts now, you will be better equipped to understand how algorithms handle uncertainty, identify outliers in datasets and validate model results during our live session.
+At the end of each task, write your answers to the reflection questions before reading the sample answers. The act of attempting the answer yourself — even if you get it wrong — is more valuable than reading the answer cold.
 
-## ⚡ Your Self-Study Tasks
+---
 
-Please complete the following activities before our session.
+## Task 1: Foundations of Probability (20 min)
 
-### 📝 Task 1: The Foundations of Probability (20 Minutes)
+### Real-World Scenario
 
-**Activity:** 
+You work in the marketing team at an e-commerce company. Your manager asks: "Do customers who receive our Tuesday newsletter spend more on average than those who don't?" Before you can answer that, you need to understand your data. Are there outliers distorting the average? Are the two groups really different, or could it be random variation? That is the work of probability and statistics.
 
-Watch the video titled [**"The Statistics of Uncertainty"**](https://youtu.be/u2Hgz9jtOHc).
+### What to Do
 
-[![video](https://img.youtube.com/vi/u2Hgz9jtOHc/default.jpg)](https://youtu.be/u2Hgz9jtOHc)
+1. Watch the video linked in `reference.md` under "The Statistics of Uncertainty" (10 min)
+2. Open `notebooks/Part_1_probability_statistics_lesson.ipynb` — read through it without running the code. Focus on the sections covering Law of Large Numbers, mean, median, standard deviation, and correlation.
 
-Open the [`Part_1_probability_statistics_lesson.ipynb`](/notebooks/Part_1_probability_statistics_lesson.ipynb) notebook. Skim through the sections on **The Law of Large Numbers**, **Measures of Central Tendency**, and **Measures of Dispersion** (do not run the code)
+### Mini-Exercise 1A: Spot the Outlier Effect
 
-Review the code cells that utilize `np.random.binomial` and `np.mean`. Pay close attention to how the sample mean stabilizes as the number of experiments increases.
+Without running any code, look at these two datasets:
 
-**Guiding Questions:**
-* **Law of Large Numbers:** In the coin flip simulation, why does the probability line appear "jittery" with small sample sizes but flatten out as $N$ increases?
-* **Descriptive Stats:** Why might we prefer the **Median** over the **Mean** when analyzing a dataset with extreme outliers (skewed distribution)?
-* **Correlation:** How does the `np.cov` (covariance) matrix relate to `st.pearsonr` (correlation)? Why is correlation often preferred for measuring relatedness?
+```
+Dataset A: [50, 52, 48, 51, 49, 53, 50]
+Dataset B: [50, 52, 48, 51, 49, 53, 980]
+```
 
-### 📝 Task 2: Distributions and The Central Limit Theorem (20 Minutes)
+**Question:** Estimate (don't calculate) how the mean and median will differ between Dataset A and Dataset B. Which measure is more useful for describing "typical" values in Dataset B, and why?
 
-**Activity:** 
+**Write your answer here before reading the sample answer.**
 
-Watch the video titled [**"The Central Limit Theorem"**](https://youtu.be/ITs5zp1Xv2w).
+> **Sample answer:** Dataset A: mean ≈ 50.4, median = 50. Very similar — no outlier distortion.
+> Dataset B: the 980 drags the mean up dramatically (to roughly 190), while the median stays around 50. The median is far more useful for Dataset B because it is resistant to that outlier. The mean would give a completely misleading picture of what a "typical" value looks like.
 
-[![video](https://img.youtube.com/vi/ITs5zp1Xv2w/default.jpg)](https://youtu.be/ITs5zp1Xv2w)
+### Mini-Exercise 1B: Correlation Intuition
 
-Open the [`Part_2_probability_statistics_lesson.ipynb`](./notebooks/Part_2_probability_statistics_lesson.ipynb) notebook. Skim through the sections **"Part 2: Distributions in Machine Learning"** up to **"The Central Limit Theorem."**
+Match each pair of variables to the likely correlation type (strong positive / weak positive / near zero / strong negative):
 
-Examine the visual difference between Uniform, Normal (Gaussian), and Skewed distributions using the `seaborn` plots provided.
+| Variable Pair | Your Guess |
+|---|---|
+| Hours studied vs exam score | |
+| Ice cream sales vs drowning incidents | |
+| Age of a car vs its resale value | |
+| Shoe size vs IQ | |
 
-**Guiding Questions:**
-* **Normal Distribution:** Why is the "Bell Curve" (Gaussian distribution) the default assumption for noise in many Machine Learning models?
-* **Central Limit Theorem (CLT):** Look at the code where we sample from a *skewed* or *uniform* distribution. What happens to the shape of the distribution of the **sample means** as the sample size increases? Why is this phenomenon powerful for data science?
+> **Sample answers:**
+> - Hours studied vs exam score → **strong positive** (more study, higher score)
+> - Ice cream sales vs drowning incidents → **weak to moderate positive** (both driven by summer, not each other — this is a classic spurious correlation)
+> - Age of a car vs resale value → **strong negative** (older car, lower value)
+> - Shoe size vs IQ → **near zero** (no meaningful relationship)
 
-### 📝 Task 3: Statistical Inference and Hypothesis Testing (20 Minutes)
+### Reflection Questions
 
-**Activity:** 
+**Q:** The Law of Large Numbers says that as sample size grows, the sample average approaches the true average. Why does this matter when training a machine learning model?
 
-Watch the video titled [**"Statistical Testing"**](https://youtu.be/Uos-xeDAvqA). 
+> **Sample answer:** It means a model trained on more data will have a more accurate picture of the true underlying patterns. With a small dataset, random noise in the sample can mislead the model into learning patterns that do not really exist. Larger samples make the signal more reliable relative to the noise.
 
-[![video](https://img.youtube.com/vi/Uos-xeDAvqA/default.jpg)](https://youtu.be/Uos-xeDAvqA)
+---
 
-Continue in [`Part_3_probability_statistics_lesson.ipynb`](/notebooks/Part_3_probability_statistics_lesson.ipynb), moving to **"Part 3: Introduction to Statistics."** Review the concepts of **Z-scores**, **p-values**, and the **t-test**.
+## Task 2: Probability Distributions (20 min)
 
-Trace the logic of the "Penguin Hypothesis Testing" scenario. Do not worry about writing the code yet, but understand *why* we are separating the data into Male and Female groups.
+### Real-World Scenario
 
-**Guiding Questions:**
-* **Z-Scores:** If a data point has a z-score of +2.5, what does that tell you about its relationship to the average data point? How might this help you detect anomalies?
-* **T-Test:** When comparing the flipper lengths of two groups of penguins, what does a p-value lower than 0.05 imply about the difference between those groups?
+You are a data analyst at a hospital. You have been asked to flag patient wait times that are "unusually long." To do that, you need to know what "normal" looks like — the shape of the distribution of wait times — so you can identify when a value is far outside the norm.
 
-## 🙌🏻 Active Engagement Strategies
+### What to Do
 
-To deepen your retention, try one of the following while you review:
+1. Watch the video linked in `reference.md` under "The Central Limit Theorem" (10 min)
+2. Open `notebooks/Part_2_probability_statistics_lesson.ipynb` — read through the sections on Uniform, Normal, and Skewed distributions. Pay attention to the seaborn visualisation code — you do not need to memorise it, but notice how the shape of each distribution looks different.
 
-* **"Code Commentary":** Select a code block involving `np.random` or `scipy.stats` (st) and write a mental or scratchpad note explaining exactly what the parameters (like `loc`, `scale`, or `size`) control.
-* **Visualization Prediction:** Before running a cell that generates a plot (like `sns.displot`), try to sketch what you think the distribution will look like based on the code provided.
-* **Real-World Connection:** Think of a dataset you work with. Is it normally distributed? If you calculated the z-score of a specific metric, what would constitute an outlier in your business context?
+### Mini-Exercise 2A: Distribution Matching
 
-## 📖 Additional Reading Material
+Match each real-world variable to the distribution that best describes it (Normal / Right-skewed / Left-skewed / Uniform):
 
-- [Introduction to Probability Rules](https://www.datacamp.com/cheat-sheet/introduction-to-probability-rules-cheat-sheet)
-- Check out the topics on [Probability and Statistics](https://www.mathsisfun.com/data/index.html) section 
+| Variable | Distribution |
+|---|---|
+| Heights of adult men in a country | |
+| Number of social media followers per account | |
+| Score on a very easy exam (most people score high) | |
+| A random number generator (equally likely to produce any value 1–100) | |
 
-### 🙋🏻‍♂️ See you in the session!
+> **Sample answers:**
+> - Heights → **Normal** (bell curve, most cluster around average)
+> - Social media followers → **Right-skewed** (most have few followers, a tiny number have millions)
+> - Easy exam scores → **Left-skewed** (most cluster near the top, few score low)
+> - Random number generator → **Uniform** (every value equally likely)
+
+### Mini-Exercise 2B: Central Limit Theorem in Plain English
+
+Imagine you sample 5 people's daily steps from a fitness app. Then you repeat this 1,000 times and plot the average of each sample.
+
+**Question:** What shape would you expect that plot of 1,000 averages to have, even if individual daily steps are not normally distributed? Why?
+
+**Write your answer before reading the sample answer.**
+
+> **Sample answer:** You would expect a normal (bell curve) shape. This is the Central Limit Theorem — regardless of the shape of the original distribution, the distribution of sample means will approach normal as the number of samples grows. This is why so many statistical techniques that assume normality still work in practice.
+
+### Reflection Questions
+
+**Q:** Why does a machine learning practitioner need to care about whether their data is normally distributed or skewed?
+
+> **Sample answer:** Many ML algorithms perform best when features are roughly normally distributed. Skewed features can cause algorithms to weight extreme values too heavily, or produce misleading error metrics. Knowing the distribution helps you decide when to apply transformations (like log-scaling) before training.
+
+---
+
+## Task 3: Statistical Inference and Hypothesis Testing (20 min)
+
+### Real-World Scenario
+
+You are a product analyst at a tech startup. The engineering team just deployed a new homepage design. After two weeks, conversion rates look slightly higher than before. Your CEO asks: "Is this improvement real, or could it just be a good two weeks?" Hypothesis testing is how you answer that question rigorously.
+
+### What to Do
+
+1. Watch the video linked in `reference.md` under "Statistical Testing" (10 min)
+2. Open `notebooks/Part_3_probability_statistics_lesson.ipynb` — read through the hypothesis testing section. Focus on understanding the logic flow: null hypothesis → test statistic → p-value → conclusion. You do not need to memorise formulas.
+
+### Mini-Exercise 3A: Interpret These Results
+
+A data scientist tests whether a new email subject line generates more opens than the old one. She runs a t-test and gets:
+
+```
+t-statistic: 2.34
+p-value: 0.021
+```
+
+**Questions:**
+1. Is this result statistically significant at the 0.05 threshold?
+2. What would you recommend the team do?
+3. If the p-value were 0.43 instead, what would change?
+
+> **Sample answers:**
+> 1. Yes — 0.021 < 0.05, so the result is statistically significant.
+> 2. Roll out the new subject line — the data provides sufficient evidence that it genuinely performs better.
+> 3. With p = 0.43, we would fail to reject the null hypothesis. The improvement could easily be explained by random variation. The recommendation would be: do not change yet, collect more data or try a different subject line.
+
+### Mini-Exercise 3B: Z-Score Interpretation
+
+A factory's product weights have a mean of 500g and a standard deviation of 10g. A quality control check finds an item weighing 535g.
+
+**Question:** Calculate the z-score for this item. Should the factory flag it for inspection?
+
+*Formula: z = (value - mean) / standard deviation*
+
+> **Sample answer:**
+> z = (535 - 500) / 10 = **3.5**
+> A z-score of 3.5 means this item is 3.5 standard deviations above the mean. In a normal distribution, only about 0.02% of values fall this far out. Yes — this item should absolutely be flagged. It is extremely unlikely to be within normal variation and suggests a manufacturing defect or measurement error.
+
+### Reflection Questions
+
+**Q:** A data scientist tells you their model has a 95% confidence interval of [2.1%, 4.7%] improvement in conversion rate. What does this mean in plain English?
+
+> **Sample answer:** It means that if we ran this experiment many times, 95% of the time the true improvement would fall somewhere between 2.1% and 4.7%. We are fairly confident the new version is genuinely better, and the realistic size of that improvement is in that range — it's not likely to be negligible or enormous.
+
+---
+
+## Learning App Idea 🔨
+
+You are building toward the end-of-module hackathon where your team creates a learning app that makes one concept from this course fun and accessible.
+
+After today's self-study, jot down any ideas that came to mind:
+
+- Could a coin-flip simulator that grows the sample size in real time show the Law of Large Numbers visually?
+- Could a drag-and-drop game where users place data points and watch the mean vs median shift teach the outlier effect?
+- Could a "p-value explainer" that takes a plain-English scenario and returns a plain-English verdict make hypothesis testing less intimidating?
+
+No commitment needed yet — just capture the idea.
+
+---
+
+## Bring to the Lesson Session
+
+Come ready to discuss:
+1. One concept from your self-study that did not fully click — the session will address it
+2. Your answer to Mini-Exercise 3A — the class will compare approaches
+3. One real-world example from your own work or life where you have seen probability or statistics applied (consciously or not)

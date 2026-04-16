@@ -2,6 +2,9 @@
 
 Probability and statistics are the foundation of every machine learning algorithm. This module gives you the tools to describe data, understand uncertainty, and test whether the patterns you find are real — or just noise.
 
+![Probability](assets/infographic-3.1-probability.png)
+![Statistics](assets/infographic-3.1-statistics.png)
+
 ---
 
 ## Learning Outcomes

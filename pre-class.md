@@ -1,4 +1,4 @@
-# Self Study — 3.1 Probability and Statistics
+# Pre-Class — 3.1 Probability and Statistics
 
 **Estimated time:** 60 minutes  
 **Complete this before the lesson session.**

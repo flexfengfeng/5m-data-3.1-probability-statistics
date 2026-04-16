@@ -38,7 +38,7 @@ This module follows a three-phase flow. Work through the phases in order.
 
 **Goal:** Arrive at the session having seen the concepts once, so the hands-on time feels like reinforcement — not a first encounter.
 
-**Start here →** [**studies.md**](./studies.md)
+**Start here →** [**pre-class.md**](./pre-class.md)
 
 The self-study guide walks you through the key ideas with videos, mini-exercises, and reflection questions. Attempt each question before checking the sample answer.
 
@@ -89,7 +89,7 @@ Recommended books, videos, and articles if you want to go deeper on any topic fr
 ```
 README.md             ← You are here
 setup.md              ← One-time environment setup (do this first)
-studies.md            ← Phase 1: Pre-class self-study
+pre-class.md          ← Phase 1: Pre-class self-study
 lesson.md             ← Phase 2: Concept reference for all key topics
 notebooks/
   Part_1_*.ipynb      ← Phase 2: In-class notebook — probability foundations

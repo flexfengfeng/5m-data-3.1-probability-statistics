@@ -5,7 +5,7 @@
 
 This is a flipped-classroom preparation guide. Your goal is not to memorise everything — it is to arrive at the session having seen the concepts once so the hands-on time feels like reinforcement, not a first encounter.
 
-For each task: watch the video, skim the notebook section, attempt the mini-exercise, then check the sample answer. The act of trying before looking is what makes the learning stick.
+For each task: watch the video, preview the notebook section, attempt the mini-exercise, then check the sample answer. The act of trying before looking is what makes the learning stick.
 
 ---
 
@@ -21,7 +21,7 @@ You work in the marketing team at an e-commerce company. Your manager asks: "Do 
 
 [![The Statistics of Uncertainty](https://img.youtube.com/vi/u2Hgz9jtOHc/default.jpg)](https://youtu.be/u2Hgz9jtOHc)
 
-2. Open `notebooks/Part_1_probability_statistics_lesson.ipynb` — skim through without running the code. Focus on the Law of Large Numbers, mean, median, and mode sections. Notice how `np.random.binomial` is used to simulate experiments and how the sample mean stabilises as sample size grows.
+2. Open `notebooks/Part_1_probability_statistics_lesson.ipynb` — read through the markdown cells and glance at the code without running it yet. Focus on the Law of Large Numbers, mean, median, and mode sections. You don't need to understand every line — just follow the story and notice how `np.random.binomial` simulates experiments and how the sample mean changes as the number of flips grows.
 
 ### Mini-Exercise 1A: Spot the Outlier Effect
 
@@ -74,7 +74,7 @@ You are a data analyst at a hospital. You have been asked to flag patient wait t
 
 [![The Central Limit Theorem](https://img.youtube.com/vi/ITs5zp1Xv2w/default.jpg)](https://youtu.be/ITs5zp1Xv2w)
 
-2. Open `notebooks/Part_2_probability_statistics_lesson.ipynb` — skim the sections on Uniform, Normal, and Skewed distributions. Pay attention to the seaborn plots — notice how the shape of each distribution looks different. You don't need to memorise the code.
+2. Open `notebooks/Part_2_probability_statistics_lesson.ipynb` — read the markdown cells and look at the distribution plots without running anything yet. Focus on how the shape of Uniform, Normal, and Skewed distributions differ visually. You don't need to understand the plotting code — just build a mental picture of what each shape looks like.
 
 ### Mini-Exercise 2A: Distribution Matching
 
@@ -122,7 +122,7 @@ You are a product analyst at a tech startup. The engineering team just deployed 
 
 [![Statistical Testing](https://img.youtube.com/vi/Uos-xeDAvqA/default.jpg)](https://youtu.be/Uos-xeDAvqA)
 
-2. Open `notebooks/Part_3_probability_statistics_lesson.ipynb` — skim the sections on z-scores, p-values, and the hypothesis test. Focus on the logic flow: null hypothesis → test statistic → p-value → conclusion. You don't need to memorise any formulas.
+2. Open `notebooks/Part_3_probability_statistics_lesson.ipynb` — read the markdown cells without running anything yet. Focus on the logic flow of the hypothesis test: null hypothesis → test statistic → p-value → conclusion. You don't need to memorise formulas — just understand the reasoning behind each step.
 
 ### Mini-Exercise 3A: Interpret These Results
 

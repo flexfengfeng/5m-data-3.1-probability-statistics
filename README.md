@@ -46,7 +46,13 @@ The self-study guide walks you through the key ideas with reflection questions. 
 
 Each key concept is explained in plain English with a real-world analogy and a quick-check question. Use this during and after class to check your understanding.
 
-**Run the notebooks in order:**
+**Choose your entry point:**
+
+> **Prefer learning by doing with an instructor?** Start with the three part notebooks below.
+>
+> **Prefer story-driven learning?** Start with `notebooks/case_study.ipynb` — it covers all the same concepts as a single connected narrative, following Maya, a junior data analyst at a Singapore e-commerce company, through one week of real problems. You can use it instead of or alongside Parts 1–3.
+
+**Part notebooks — run in order:**
 
 | # | Notebook | What you explore |
 |---|---|---|
@@ -54,11 +60,7 @@ Each key concept is explained in plain English with a real-world analogy and a q
 | 2 | `notebooks/Part_2_probability_statistics_lesson.ipynb` | Uniform · Normal · Skewed distributions · Central Limit Theorem |
 | 3 | `notebooks/Part_3_probability_statistics_lesson.ipynb` | Z-scores · P-values · Hypothesis testing |
 
-Each notebook is self-contained — it opens with a business scenario, guides you through the code, and ends with reflection prompts. Read every markdown cell, not just the code.
-
-**Optional: see it all as one story →** `notebooks/case_study.ipynb`
-
-Follows Maya, a junior data analyst at ShopEasy (a Singapore e-commerce company), through one week of real data problems. All three topic areas appear in a single connected narrative — useful if you prefer story-driven learning or want to see how the concepts connect before diving into the individual notebooks.
+Each notebook opens with a business scenario, guides you through the code with Pause & Predict prompts, and ends with reflection questions. Read every markdown cell, not just the code.
 
 ---
 
@@ -87,7 +89,7 @@ notebooks/
   Part_1_*.ipynb      ← Phase 2: In-class notebook — probability foundations
   Part_2_*.ipynb      ← Phase 2: In-class notebook — distributions
   Part_3_*.ipynb      ← Phase 2: In-class notebook — hypothesis testing
-  case_study.ipynb    ← Phase 2: Optional story-driven notebook (ShopEasy)
+  case_study.ipynb    ← Phase 2: Story-driven alternative (ShopEasy) — good starting point for story-based learners
   assignment.ipynb    ← Phase 3: Practice tiers + assignment + sample solutions
 reference.md          ← Phase 3: Further reading and glossary
 environment.yml       ← Conda environment spec (used in setup)

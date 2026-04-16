@@ -56,9 +56,9 @@ Each key concept is explained in plain English with a real-world analogy and a q
 
 Each notebook is self-contained — it opens with a business scenario, guides you through the code, and ends with reflection prompts. Read every markdown cell, not just the code.
 
-**Then practise →** `notebooks/practice.ipynb`
+**Optional: see it all as one story →** `notebooks/case_study.ipynb`
 
-Three-tier practice exercises (guided → partial → open) to bridge the gap between the notebooks and the assignment.
+Follows Maya, a junior data analyst at ShopEasy (a Singapore e-commerce company), through one week of real data problems. All three topic areas appear in a single connected narrative — useful if you prefer story-driven learning or want to see how the concepts connect before diving into the individual notebooks.
 
 ---
 
@@ -66,9 +66,9 @@ Three-tier practice exercises (guided → partial → open) to bridge the gap be
 
 **Goal:** Apply what you learned independently to a new scenario.
 
-**Assignment →** [**assignment.md**](./assignment.md)
+**Assignment →** `notebooks/assignment.ipynb`
 
-Three exercises set in a healthcare context. Each asks you to write code *and* explain your findings in plain English, as you would to a non-technical colleague. Sample solutions are included at the bottom of the file — check them after you have attempted each exercise yourself.
+Three tiers of practice (guided → partial → open) followed by three independent assignment exercises set in a healthcare context. Each exercise asks you to write code *and* explain your findings in plain English. Sample solutions are at the bottom of the notebook — check them only after you have attempted each exercise yourself.
 
 **Further reading →** [**reference.md**](./reference.md)
 
@@ -79,17 +79,17 @@ Recommended books, videos, and articles if you want to go deeper on any topic fr
 ## File Map
 
 ```
-README.md          ← You are here
-setup.md           ← One-time environment setup (do this first)
-studies.md         ← Phase 1: Pre-class self-study
-lesson.md          ← Phase 2: Concept reference for all key topics
+README.md             ← You are here
+setup.md              ← One-time environment setup (do this first)
+studies.md            ← Phase 1: Pre-class self-study
+lesson.md             ← Phase 2: Concept reference for all key topics
 notebooks/
-  Part_1_*.ipynb   ← Phase 2: In-class notebook — probability foundations
-  Part_2_*.ipynb   ← Phase 2: In-class notebook — distributions
-  Part_3_*.ipynb   ← Phase 2: In-class notebook — hypothesis testing
-  practice.ipynb   ← Phase 2→3: Practice exercises (3 tiers)
-assignment.md      ← Phase 3: After-class assignment with sample solutions
-reference.md       ← Phase 3: Further reading
-environment.yml    ← Conda environment spec (used in setup)
-assets/            ← Supporting images
+  Part_1_*.ipynb      ← Phase 2: In-class notebook — probability foundations
+  Part_2_*.ipynb      ← Phase 2: In-class notebook — distributions
+  Part_3_*.ipynb      ← Phase 2: In-class notebook — hypothesis testing
+  case_study.ipynb    ← Phase 2: Optional story-driven notebook (ShopEasy)
+  assignment.ipynb    ← Phase 3: Practice tiers + assignment + sample solutions
+reference.md          ← Phase 3: Further reading and glossary
+environment.yml       ← Conda environment spec (used in setup)
+assets/               ← Supporting images
 ```

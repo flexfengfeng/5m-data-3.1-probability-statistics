@@ -20,6 +20,14 @@ By the end of this module you will be able to:
 
 ---
 
+## Before You Start — Environment Setup
+
+> **If this is your first time using this repo, do this before anything else.**
+>
+> Follow the [**Setup Guide →**](./setup.md) to install the required Python environment. It takes about 10 minutes. Without it, none of the notebooks will run.
+
+---
+
 ## Your Learning Path
 
 This module follows a three-phase flow. Work through the phases in order.
@@ -32,9 +40,7 @@ This module follows a three-phase flow. Work through the phases in order.
 
 **Start here →** [**studies.md**](./studies.md)
 
-The self-study guide walks you through the key ideas with reflection questions. Read it, attempt the questions, then check the sample answers before moving on.
-
-> **First time?** Before you do anything else, follow the [Setup Guide](./setup.md) to get your environment running. It takes about 10 minutes.
+The self-study guide walks you through the key ideas with videos, mini-exercises, and reflection questions. Attempt each question before checking the sample answer.
 
 ---
 

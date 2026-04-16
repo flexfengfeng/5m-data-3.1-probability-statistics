@@ -164,11 +164,11 @@ A factory's product weights have a mean of 500g and a standard deviation of 10g.
 
 ## Active Engagement Tips
 
-To deepen your retention while reviewing, try one of these:
+To deepen your retention, try one of these during your preview read:
 
-- **Code commentary:** Pick a code block using `np.random` or `scipy.stats` and write a note explaining what each parameter (`loc`, `scale`, `size`) controls. Say it in your own words.
-- **Visualisation prediction:** Before a cell that generates a plot, try to sketch what you think the distribution will look like based on the code — then run it and compare.
-- **Real-world connection:** Think of a dataset from your own work or life. Is it likely normally distributed or skewed? What would a z-score outlier mean in that context?
+- **Visualisation prediction:** When you see a cell that generates a plot, try to sketch the shape you expect before you look at the output. You'll run the code in class — this builds anticipation and makes the result more memorable.
+- **Real-world connection:** As you read each concept, think of a dataset from your own work or life. Is it likely normally distributed or skewed? What would a z-score outlier mean in that context?
+- **Code commentary** *(do this during class when the notebooks are running):* Pick a code block using `np.random` or `scipy.stats` and write a comment in your own words explaining what each parameter (`loc`, `scale`, `size`) controls. If you can explain it, you understand it.
 
 ---
 
